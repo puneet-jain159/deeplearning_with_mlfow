@@ -1,0 +1,9 @@
+datasets
+lightning
+mlflow
+peft
+polars
+sentencepiece
+torch
+torchmetrics
+transformers

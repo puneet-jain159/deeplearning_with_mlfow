@@ -33,10 +33,7 @@ and the technology behind it. Listed below are the five tools we will use extens
 
 - **PyTorch Lightning** (gives us just enough control without excessive boilerplate)
 - **Hugging Face** (access to thousands of community-maintained models)
-- **Polars** (this data manipulation library is orders of magnitude faster than pandas
-  and is
-  really trending now)
-- **MLflow** (for tracking results during the process of fine tuning)
+- **MLflow** (for tracking results and checkpointing weights during the process of fine tuning)
 
 At the end of the day, you should take away two things from this document:
 

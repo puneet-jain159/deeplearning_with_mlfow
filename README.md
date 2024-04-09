@@ -1,4 +1,4 @@
-# 🔥 Build Your Custom AI/LLM With PyTorch Lightning
+# 🔥 Build Your Custom DL model With PyTorch Lightning and MLFlow for Tracking
 
 ## Introduction
 
@@ -61,36 +61,6 @@ what unfair clauses are and the different types of unfair clauses. What makes UN
 perfect for text classification is that it has been manually labeled in accordance with
 that which was set down in the European law.
 
-Chalkidis et al. (2021) applied eight different machine learning methods to UNFAIR-ToS
-and obtained macro F1 ranging from 75 to 83, and in Figure 1 just below, we excerpt from
-their published results.
-
-#### Figure 1
-
-| Method       | UNFAIR-ToS |          |
-|--------------|------------|----------|
-|              | micro F1   | macro F1 |
-| TFIDF-SVM    | 94.7       | 75.0     |
-| BERT         | 95.6       | 81.3     |
-| RoBERTa      | 95.2       | 79.2     |
-| DeBERTa      | 95.5       | 80.3     |
-| Longformer   | 95.5       | 80.9     |
-| BigBird      | 95.7       | 81.3     |
-| Legal-BERT   | 96.0       | 83.0     |
-| CaseLaw-BERT | 96.0       | 82.3     |
-
-Interesting things we can infer from this table are:
-
-1. F1, not accuracy, is the authors' preferred metric
-2. macro F1 is a better differentiator than micro F1
-3. all the deep learning models exhibit similar performance while SVM is materially worse
-
-Looking at the data, class imbalance is certainly present, which is a good reason for the
-first and second point above.
-
-There are eight different types of unfair clauses. The authors of that paper developed
-multi-label classification models for the eight types, but we are simply going to
-build a binary classification model that classifies a clause as fair or unfair.
 
 Let's design how we're going to do it.
 
@@ -117,8 +87,3 @@ Let's design how we're going to do it.
 
 #Todo
 
-
-
-Ilias Chalkidis, Abhik Jana, Dirk Hartung, Michael Bommarito, Ion Androutsopoulos,
-Daniel Martin Katz, Nikolaos Aletras. (2021). *LexGLUE: A Benchmark Dataset for Legal
-Language Understanding in English*. Retrieved from arXiv: https://arxiv.org/abs/2110.00976

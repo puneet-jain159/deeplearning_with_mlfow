@@ -29,7 +29,7 @@ great accuracy and scale. The proven way to customize AI to your business
 processes is to fine tune an LLM on your data and on the action you want AI to perform.
 
 Let's talk specifically about the fine tuning that we are going to do in this document
-and the technology behind it. Listed below are the five tools we will use extensively:
+and the technology behind it. Listed below are the three tools we will use extensively:
 
 - **PyTorch Lightning** (gives us just enough control without excessive boilerplate)
 - **Hugging Face** (access to thousands of community-maintained models)

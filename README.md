@@ -6,20 +6,15 @@ Processes and information are at the heart of every business. The vulnerability 
 opportunity of this moment is the question of whether your business can automate your
 processes using AI, and reap the rewards of doing so. ChatGPT, a general purpose AI, has
 opened our eyes to what AI can do. What matters now is directing the power of AI to *your*
-business problems and unlocking the value of *your* proprietary data. In this document, I 
-will
-show you how.
+business problems and unlocking the value of *your* proprietary data. 
 
 ## Table of Contents
 
 1. [Overview of LLM Fine Tuning](#1-overview-of-llm-fine-tuning)
 2. [Problem Background](#2-problem-background)
 3. [Architecture of the AI System](#3-architecture-of-the-ai-system)
-4. [Code Deep Dive](#4-code-deep-dive)
-5. [Model Results](#5-model-results)
-6. [Installation and Quick Start](#6-installation-and-quick-start)
-7. [Contribute](#7-contribute)
-8. [References](#8-references)
+4. [Installation and Quick Start](#6-installation-and-quick-start)
+5. [References](#8-references)
 
 ## 1. Overview of LLM Fine Tuning
 
@@ -35,52 +30,29 @@ and the technology behind it. Listed below are the three tools we will use exten
 - **Hugging Face** (access to thousands of community-maintained models)
 - **MLflow** (for tracking results and checkpointing weights during the process of fine tuning)
 
-At the end of the day, you should take away two things from this document:
+At the end, you should take away two things from this document:
 
 - How to build deep learning models that attain state-of-the-art results
-- How the experience of building such models can be pretty easy when your mentality is
-  to build small, modular, and reusable components (something that PyTorch Lightning
-  facilitates)
+- How the experience of building such models can be pretty easy when you have the write tracking and logging software to streamline the development process
 
 
-## 1. Problem Background
+## 2. Problem Background
 
-A good process for finding suitable problems for machine learning and for quality datasets
-is to start by browsing sites with benchmarks. Benchmarks provide a frame of reference
-for the level of difficulty of the problem for machine learning, which we use to measure
-our progress during model development. One particular dataset with well established
-benchmarks is
-the [Unfair Terms of Service dataset (UNFAIR-ToS)](https://huggingface.co/datasets/lex_glue/viewer/unfair_tos);
-here's an intriguing
-problem statement for it: Use AI to find all unfair clauses in Terms of Service
-contracts. The context is that the European consumer law on unfair contracts establishes
-what unfair clauses are and the different types of unfair clauses. What makes UNFAIR-ToS
-perfect for text classification is that it has been manually labeled in accordance with
-that which was set down in the European law.
+In today’s world, it’s hard to find a service, platform, or even a consumer good that doesn’t have a legally-binding terms of service connected with it. These encyclopedic size agreements, filled with dense legal jargon and sometimes baffling levels of specificity, are so large that most people simply accept them without reading them. However, reports have indicated over time that occasionally, some suspiciously unfair terms are embedded within them.
+
+Addressing unfair clauses in Terms of Service (TOS) agreements through machine learning (ML) is particularly relevant due to the pressing need for transparency and fairness in legal agreements that affect consumers. Consider the following clause from an example Terms of Service agreement: "We may revise these Terms from time to time. The changes will not be retroactive, and the most current version of the Terms, which will always..." This clause stipulates that the service provider may suspend or terminate the service at any time for any reason, with or without notice. Most people would consider this to be quite unfair. 
 
 
 Let's design how we're going to do it.
 
 ## 3. Architecture of the AI System
-#Todo
+![Architecture](img/architecture.png)
 
-#### Figure 2
 
-#Todo
-
-### 🚶 A Tour of the Project
+## 4. Installation and Quick Start
 
 #Todo
 
-## 5. Model Results
+## 5. References
 
 #Todo
-
-#### Figure 10
-
-#Todo
-
-## 6. Installation and Quick Start
-
-#Todo
-

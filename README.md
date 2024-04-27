@@ -13,8 +13,9 @@ business problems and unlocking the value of *your* proprietary data.
 1. [Overview of LLM Fine Tuning](#1-overview-of-llm-fine-tuning)
 2. [Problem Background](#2-problem-background)
 3. [Architecture of the AI System](#3-architecture-of-the-ai-system)
-4. [Installation and Quick Start](#6-installation-and-quick-start)
-5. [References](#8-references)
+4. [Code Deep Dive](#4-code-deep-dive)
+5. [Installation and Quick Start](#5-installation-and-quick-start)
+6. [References](#6-references)
 
 ## 1. Overview of LLM Fine Tuning
 
@@ -46,13 +47,39 @@ Addressing unfair clauses in Terms of Service (TOS) agreements through machine l
 Let's design how we're going to do it.
 
 ## 3. Architecture of the AI System
-![Architecture](img/architecture.png)
+![Architecture](img/architecture.png "Overview of The Architecture")
+
+The architecture outlines the workflow for fine-tuning a language model. It begins with a fine-tuning job that loads data and uses Hugging Face (HF) libraries to Fetch pre-trained models and wraps them in a lightening Module. Metrics and checkpoints are logged at each step with MLflow. Finally, a checkpoint is loaded to run inference.
+
+![metrics](img/metrics.png "Metrics logged in MLFlow")
+
+![checkpoint](img/Checkpoint.png "Checkpoints logged during training")
+
+## 4. Code Deep Dive
+
+###### TODO to update link once MLFLow Blog is published
+
+## 5. Installation and Quick Start
+
+**Step 1.** Clone this repository into a local working directory:
+
+```sh
+git clone https://github.com/puneet-jain159/deeplearning_with_mlfow
+```
+
+**Step 2.** We recommend using Jupyter Notebook for its ability to install all dependencies at runtime and to execute magic commands. For installation guidance, please refer to the [Jupyter installation documentation](https://jupyter.org/install) . Additionally, all project dependencies are listed in `requirements.txt`; you can create a virtual environment for these instead of using IPython.
 
 
-## 4. Installation and Quick Start
 
-#Todo
+**Step 3.** Using IPython/Jupyter Notebook, simply run the `train.ipynb`. you can use to command to execute from terminal 
+
+```sh
+jupyter nbconvert --execute train.ipynb
+```
+
 
 ## 5. References
-
-#Todo
+1. [Build Your Custom AI/LLM With PyTorch Lightning](https://medium.com/@jz77/build-your-custom-ai-llm-with-pytorch-lightning-4eeb943dd88a)
+2. Ilias Chalkidis, Abhik Jana, Dirk Hartung, Michael Bommarito, Ion Androutsopoulos,
+Daniel Martin Katz, Nikolaos Aletras. (2021). *LexGLUE: A Benchmark Dataset for Legal
+Language Understanding in English*. Retrieved from arXiv: https://arxiv.org/abs/2110.00976

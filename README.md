@@ -51,13 +51,15 @@ Let's design how we're going to do it.
 
 The architecture outlines the workflow for fine-tuning a language model. It begins with a fine-tuning job that loads data and uses Hugging Face (HF) libraries to Fetch pre-trained models and wraps them in a lightening Module. Metrics and checkpoints are logged at each step with MLflow. Finally, a checkpoint is loaded to run inference.
 
+#### Metrics Tracked in MLFLOW UI
 ![metrics](img/metrics.png "Metrics logged in MLFlow")
 
+#### Checkpoints Logged in MLFLow Artifact
 ![checkpoint](img/Checkpoint.png "Checkpoints logged during training")
 
 ## 4. Code Deep Dive
 
-###### TODO to update link once MLFLow Blog is published
+```#TODO```  to update link once MLFLow Blog is published
 
 ## 5. Installation and Quick Start
 

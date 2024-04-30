@@ -73,6 +73,13 @@ class TransformerModule(LightningModule):
             attention_mask=attention_mask,
             labels=label
         )
+    def _compute_metrics(self, batch, split) -> tuple:
+        """Helper method hosting the evaluation logic common to the <split>_step methods."""
+        outputs = self(
+            input_ids=batch["input_ids"],
+            attention_mask=batch["attention_mask"],
+            label=batch["label"],
+        )
 
         # For predicting probabilities, do softmax along last dimension (by row).
         prob_class1 = torch.argmax(torch.softmax(outputs["logits"], dim=-1), dim=1)
